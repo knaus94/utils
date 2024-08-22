@@ -1,6 +1,6 @@
 {
   "name": "@knaus94/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "knaus94",
   "license": "MIT",
   "typings": "dist/index.d.ts",
@@ -57,7 +57,5 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "dependencies": {
-    "@prisma/client": "^5.18.0"
-  }
+  "dependencies": {}
 }

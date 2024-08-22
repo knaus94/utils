@@ -1,5 +1,3 @@
-import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
-
 class xP<T> extends Promise<T> {
    constructor(executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void) {
       super(executor);
@@ -45,7 +43,7 @@ class xP<T> extends Promise<T> {
    catchByPrismaCode<TError extends Error>(codes: string | string[], handler: (error: TError) => void): xP<T> {
       return promiseOf(
          this.catch((error) => {
-            if (error instanceof PrismaClientKnownRequestError) {
+            if ('code' in error && error.name === 'PrismaClientKnownRequestError') {
                const errorCodes = Array.isArray(codes) ? codes : [codes];
                if (errorCodes.includes(error.code)) {
                   handler(error as any);
