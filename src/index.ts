@@ -12,3 +12,4 @@ export * from './constants/empty';
 export * from './utils/tuple';
 export * from './types/nullable';
 export * from './types/xor';
+export * from './types/remove-null-from-key';
