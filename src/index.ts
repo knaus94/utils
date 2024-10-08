@@ -1,7 +1,6 @@
 export * from './utils/promise-of';
 export * from './utils/compose';
 export * from './utils/execute';
-export * from './utils/minify-ipv4';
 export * from './utils/redis';
 export * from './utils/round-number';
 export * from './utils/steam';
